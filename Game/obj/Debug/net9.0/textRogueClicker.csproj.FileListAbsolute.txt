@@ -1,0 +1,14 @@
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\bin\Debug\net9.0\textRogueClicker.exe
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\bin\Debug\net9.0\textRogueClicker.deps.json
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\bin\Debug\net9.0\textRogueClicker.runtimeconfig.json
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\bin\Debug\net9.0\textRogueClicker.dll
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\bin\Debug\net9.0\textRogueClicker.pdb
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\textRogueClicker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\textRogueClicker.AssemblyInfoInputs.cache
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\textRogueClicker.AssemblyInfo.cs
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\textRogueClicker.csproj.CoreCompileInputs.cache
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\textRogueClicker.dll
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\refint\textRogueClicker.dll
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\textRogueClicker.pdb
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\textRogueClicker.genruntimeconfig.cache
+C:\Users\darek\Desktop\praca\textRogueClicker\Game\obj\Debug\net9.0\ref\textRogueClicker.dll
