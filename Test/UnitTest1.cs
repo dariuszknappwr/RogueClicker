@@ -21,7 +21,7 @@ public class Tests
     }
 
     [Test]
-    public void ClickerControllerShouldHaveZeroClicksAtStart()
+    public void Clicker_controller_should_start_with_zero_clicks()
     {
         Assert.That(controller.GetClicks, Is.EqualTo(0));
     }
@@ -40,7 +40,6 @@ public class Tests
     [Test]
     public void ClickerViewShouldPresentClicks()
     {
-
         Assert.That(view.GetClicks(), Is.EqualTo("0"));
         controller.Click();
         Assert.That(view.GetClicks(), Is.EqualTo("1"));
@@ -55,9 +54,9 @@ public class Tests
     [Test]
     public void ClickerShouldListenForInputs()
     {
-        controller.HandleInput(KeyBindsSingleton.Instance().ClickKey());
+        controller.HandleInput(new InputEvent(KeyBindsSingleton.Instance.ClickInput));
         Assert.That(controller.GetClicks(), Is.EqualTo(1));
-        controller.HandleInput(KeyBindsSingleton.Instance().BuyKey());
+        controller.HandleInput(new InputEvent(KeyBindsSingleton.Instance.BuyInput));
         Assert.That(controller.GetClicksPerSecond(), Is.EqualTo(1));
         Console.WriteLine(controller.GetClicks());
     }
@@ -66,7 +65,7 @@ public class Tests
     public void Buy_clicks_per_second_should_throw_exception_when_bought_with_non_positive_clicks_value()
     {
         Assert.That(controller.GetClicks(), Is.EqualTo(0));
-        controller.HandleInput(ConsoleKey.D);
+        controller.HandleInput(new InputEvent(KeyBindsSingleton.Instance.BuyInput));
         Assert.That(controller.GetClicksPerSecond(), Is.EqualTo(0));
     }
 
@@ -75,7 +74,7 @@ public class Tests
     {
         Mock<IInputReader> mockInput = new Mock<IInputReader>();
         Mock<IOutputWriter> mockOutput = new Mock<IOutputWriter>();
-        mockInput.SetupSequence(x => x.ReadKey())
-            .Returns(ConsoleKey.C);
+        mockInput.SetupSequence(x => x.ReadInput())
+            .Returns(new InputEvent(KeyBindsSingleton.Instance.ClickInput));
     }
 }

@@ -1,4 +1,4 @@
 public interface IInputReader
 {
-    ConsoleKey ReadKey();
+    InputEvent ReadInput();
 }

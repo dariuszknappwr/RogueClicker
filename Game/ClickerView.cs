@@ -21,7 +21,7 @@ public class ClickerView(ClickController controller, IInputReader reader, IOutpu
         , controller.GetClicksPerSecond().ToString());
     }
 
-    public void Input(ConsoleKey key)
+    public void Input(InputEvent key)
     {
         controller.HandleInput(key);
     }
@@ -33,8 +33,8 @@ public class ClickerView(ClickController controller, IInputReader reader, IOutpu
             System.Console.WriteLine(GetInfo());
             if (!Console.IsInputRedirected)
             {
-                ConsoleKeyInfo pressedKeyInfo = Console.ReadKey(true);
-                Input(pressedKeyInfo.Key);
+                InputEvent input = inputReader.ReadInput();
+                Input(input);
             }
             Thread.Sleep(1);
         }

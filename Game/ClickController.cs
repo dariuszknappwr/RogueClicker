@@ -15,7 +15,7 @@ public class ClickController
     public void BuyClickPerSecond()
     {
         
-        if (GetClicks() > 1)
+        if (GetClicks() > 0)
         {
             model.clicks -= 1;
             model.clicksPerSecond++;
@@ -32,13 +32,13 @@ public class ClickController
         return model.clicksPerSecond;
     }
 
-    public void HandleInput(object key)
+    public void HandleInput(InputEvent key)
     {
-        if (key == KeyBindsSingleton.Instance().ClickKey())
+        if (InputStateMachine.Instance.IsClick(key))
         {
             Click();
         }
-        else if (key == KeyBindsSingleton.Instance().BuyKey())
+        else if (InputStateMachine.Instance.IsBuy(key))
         {
             BuyClickPerSecond();
         }

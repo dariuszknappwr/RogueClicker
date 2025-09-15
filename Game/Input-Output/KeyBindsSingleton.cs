@@ -1,24 +1,8 @@
 
-public class KeyBindsSingleton : IKeyBinds
+public class KeyBindsSingleton : Singleton<KeyBindsSingleton>, IKeyBinds
 {
-    private static KeyBindsSingleton instance;
-    private KeyBindsSingleton() { }
-    public static KeyBindsSingleton Instance()
-    {
-        if (instance == null)
-        {
-            instance = new KeyBindsSingleton();
-        }
-        return instance;
-    }
 
-    public object ClickKey()
-    {
-        return ConsoleKey.C;
-    }
+    public string ClickInput { get => "ConsoleKey.C"; }
 
-    public object BuyKey()
-    {
-        return ConsoleKey.D;
-    }
+    public string BuyInput { get => "ConsoleKey.D"; }
 }
