@@ -1,7 +1,7 @@
 public class InputEvent
 {
     public HashSet<string> Identifiers { get; }
-    public InputEvent(IEnumerable<String> identifiers)
+    public InputEvent(IEnumerable<string> identifiers)
     {
         Identifiers = new HashSet<string>(identifiers);
     }

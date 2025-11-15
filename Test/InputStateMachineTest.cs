@@ -19,11 +19,11 @@ public class InputStateMachineTest
         InputStateMachine s2 = InputStateMachine.Instance;
         Assert.That(s1, Is.SameAs(s2));
     }
-/*
+
     [Test]
     public void Singleton_should_not_have_public_constructors()
     {
         ConstructorInfo[] constructors = typeof(InputStateMachine).GetConstructors();
         Assert.That(constructors.Length, Is.EqualTo(0));
-    }*/
+    }
 }
